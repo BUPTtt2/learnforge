@@ -1,0 +1,9 @@
+langchain>=0.1.0
+langgraph>=0.0.20
+chromadb>=0.4.22
+streamlit>=1.30.0
+modelscope>=1.11.0
+dashscope>=1.14.0
+python-dotenv>=1.0.0
+fastmcp>=0.1.0
+sentence-transformers>=2.2.0

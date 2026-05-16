@@ -1,0 +1,47 @@
+### 模型相关配置
+model_name_or_path: D:\Models\Qwen3-4B
+template: qwen3_nothink
+quantization_bit: 4
+
+### 数据相关配置（使用清洗后数据）
+dataset: merged_sft_data_cleaned
+dataset_dir: D:\LLaMA-Factory\data
+max_length: 512
+overwrite_cache: true
+preprocessing_num_workers: 1
+
+### 训练相关配置
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target: q_proj,v_proj
+
+### 输出相关配置
+output_dir: D:\Appt\大三下\学习\multi_Agent_智能日程\learnforge\sft_output_cleaned
+
+### 训练超参数（调整以减少遗忘风险）
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 4
+learning_rate: 1.5e-4
+num_train_epochs: 4
+lr_scheduler_type: cosine
+warmup_steps: 20
+logging_steps: 5
+save_steps: 50
+val_size: 0.1
+eval_steps: 50
+optim: adamw_torch
+
+### 其他配置
+bf16: false
+fp16: true
+use_rslora: false
+use_unsloth: false
+neat_packing: false
+plot_loss: false
+
+### 预测配置
+predict_with_generate: false
