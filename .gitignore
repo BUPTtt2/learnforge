@@ -64,6 +64,7 @@ memory_db/
 rag_db/
 ui/cache_db/
 ui/learning_data/
+data/
 
 # ==================== 模型文件 ====================
 models/
@@ -81,3 +82,29 @@ credentials/
 secrets/
 *.pem
 *.key
+
+# ==================== 测试文件 ====================
+test_*.py
+debug_*.py
+*_test.py
+minimal_test.py
+quick_test.py
+
+# ==================== 脚本文件 ====================
+scripts/
+generated_images/
+
+# ==================== 个人文档 ====================
+飞书文档_*
+面试官您好*
+腾讯校招*
+VERIFICATION_SUMMARY.md
+EVALUATION_SPEC.md
+INTERVIEW_PREPARE.md
+train_sft.bat
+llama_factory_config*.yaml
+Modelfile
+simple_sft_train.py
+run_sft.py
+*.doc
+*.docx
